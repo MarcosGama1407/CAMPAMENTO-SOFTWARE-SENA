@@ -1,0 +1,29 @@
+[
+          {
+                    "name" : "PHP intermediate Level",
+                    "website" : "http://laravel.com/capms",
+                    "phone" : "(111) - 11111",
+                    "description" : " Bootcamp for PHP learning",
+                    "user_id" :1,
+                    "average_rating": 4.5,
+                    "average_cost": 8000
+                    },
+                    {
+                    "name" : "Python intermediate Level",
+                    "website" : "http://pythonlearning.com/capms",
+                    "phone" : "(222) - 22222",
+                    "description" : " Bootcamp for Python learning",
+                    "user_id" :1,
+                    "average_rating": 4.5,
+                    "average_cost": 7000
+                    },
+                    {
+                    "name" : "C# intermediate Level",
+                    "website" : "http://C#learning.com/capms",
+                    "phone" : "(333) - 33333",
+                    "description" : " Bootcamp for Python learning",
+                    "user_id" :1,
+                    "average_rating": 4.5,
+                    "average_cost": 9000
+                    }
+]

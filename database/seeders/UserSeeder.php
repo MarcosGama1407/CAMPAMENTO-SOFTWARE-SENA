@@ -16,12 +16,10 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        //Construir un usuario
-        //con email, username y password
-        $u = new User();
-        $u->name =  "elshaman";
-        $u->email = "cbo@misena.edu.co";
-        $u->password = Hash::make("123456");
-        $u->save();
+       $u=new user();
+       $u->name = "Cristian";
+       $u->email = "Cristian@gmail.com";
+       $u->password = Hash::make("123456");
+       $u->save();
     }
 }

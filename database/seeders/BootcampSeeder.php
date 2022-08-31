@@ -16,24 +16,21 @@ class BootcampSeeder extends Seeder
      */
     public function run()
     {
-        //1. Truncar tabla bootcamps
-        // Bootcamp::truncate();
-        //2. Leer el archivo bootcamps.json
+        //1. conectarnos al archivo json
         $json = File::get("database/_data/bootcamps.json");
-        //2.1 Convertir el contenido json en array
-        $arreglo_bootcamps= json_decode($json); 
-        //3. Recorrer ese archivo y por cada bootcamp
-        foreach($arreglo_bootcamps as $bootcamp){
-            //4. Crear un bootcamp por cada uno
-            $b = new Bootcamp();
-            $b->name = $bootcamp->name;
-            $b->description = $bootcamp->description;
-            $b->website = $bootcamp->website;
-            $b->phone = $bootcamp->phone;
-            $b->average_rating = $bootcamp->average_rating;
-            $b->average_cost = $bootcamp->average_cost;
-            $b->user_id = 1;
-            $b->save();
-        }
+        $array_bootcamps = json_decode($json);
+        //2. recorrer el archivo
+        foreach( $array_bootcamps as $b){
+             //3. por cada instancia crear un bootcamp
+             $bootcamp = new Bootcamp();
+             $bootcamp->name = $b->name;
+             $bootcamp->description = $b->description;
+             $bootcamp->website = $b->website;
+             $bootcamp->phone = $b->phone;
+             $bootcamp->user_id = $b->user_id;
+             $bootcamp->avarage_rating = $b->avarage_rating;
+             $bootcamp->avarage_cost = $b->avarage_cost;
+             $bootcamp->save();
+        } 
     }
 }

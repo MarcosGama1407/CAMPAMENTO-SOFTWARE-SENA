@@ -1,29 +1,30 @@
 [
           {
-                    "name" : "PHP intermediate Level",
-                    "website" : "http://laravel.com/capms",
-                    "phone" : "(111) - 11111",
-                    "description" : " Bootcamp for PHP learning",
-                    "user_id" :1,
-                    "average_rating": 4.5,
-                    "average_cost": 8000
-                    },
-                    {
-                    "name" : "Python intermediate Level",
-                    "website" : "http://pythonlearning.com/capms",
-                    "phone" : "(222) - 22222",
-                    "description" : " Bootcamp for Python learning",
-                    "user_id" :1,
-                    "average_rating": 4.5,
-                    "average_cost": 7000
-                    },
-                    {
-                    "name" : "C# intermediate Level",
-                    "website" : "http://C#learning.com/capms",
-                    "phone" : "(333) - 33333",
-                    "description" : " Bootcamp for Python learning",
-                    "user_id" :1,
-                    "average_rating": 4.5,
-                    "average_cost": 9000
-                    }
+                    "name": "PHP Xtreme Programing bootcamp",
+                    "description": "PHP for begineers",
+                    "website": "laravel.org/bootcamsp",
+                    "phone": "(111)-1111111",
+                    "user_id": 1,
+                    "avarage_rating": 4.5,
+                    "avarage_cost": 2000
+          },
+
+          {
+                    "name": "Python Xtreme Programing bootcamp",
+                    "description": "Python for begineers",
+                    "website": "python.org/bootcamsp",
+                    "phone": "(222)-222222",
+                    "user_id": 1,
+                    "avarage_rating": 4.5,
+                    "avarage_cost": 8000
+          },
+          {
+                    "name": "Ruby Xtreme Programing bootcamp",
+                    "description": "Ruby for begineers",
+                    "website": "ruby.org/bootcamsp",
+                    "phone": "(333)-333333",
+                    "user_id": 1,
+                    "avarage_rating": 4.5,
+                    "avarage_cost": 4000 
+          }
 ]

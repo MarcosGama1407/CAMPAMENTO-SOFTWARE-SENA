@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('website');
             $table->string('phone', 100);
             $table->float('average_rating', 3, 2);
-            $table->decimal('average_cost', $precision = 8, $scale = 2);
+            $table->decimal('average_cost');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });

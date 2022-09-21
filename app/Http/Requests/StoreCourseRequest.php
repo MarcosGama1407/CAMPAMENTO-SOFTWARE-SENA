@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class StoreBootCampRequest extends FormRequest
+class StoreCourseRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,20 +26,27 @@ class StoreBootCampRequest extends FormRequest
     public function rules()
     {
         return [
-            "name" => 'required|min:10',
-            "user_id" => 'required|exists:users,id'
-        ];
+            "title" => 'required|min:10|max:30',
+            "description" => 'required|min:10',
+            "weeks" => 'required|numeric|max:9',
+            "enroll_cost" => 'required|numeric',
+            "minimum_skill" => 'required|in:Beginner,Intermediate,Advanced,Expert',
+            "bootcamp_id" => 'required|exists:bootcamps,id'
+        ]
+        ;
     }
 
     public function messages()
     {
         return [
-            'name.required' => 'Nombre obligatorio',
-            'name.min' => 'Nombre minimo de 5',
-            'user_id.exists' => 'Usuario no existe'
+            'title.required' => 'Nombre obligatorio',
+            'description.required' => 'Descripción obligatoria',
+            'weeks.required' => 'Valor obligatorio',
+            'enroll_cost.required' => 'Costo de inscripción obligatorio',
+            'minimum_skill.required' => 'Habilidad Obligatoria',
+            'bootcamp_id.exists' => 'Bootcamp no existe'
         ];
     }
-
 
     protected function failedValidation(Validator $v){
         //Si la validacion es fallida

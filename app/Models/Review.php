@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Bootcamp extends Model
+class Review extends Model
 {
-    protected $fillable = ['name', 'description', 'website','phone','user_id','average_rating', 'average_cost'];
     use HasFactory;
+
+    protected $fillable = ['bootcamp_id','title', 'text', 'rating','user_id'];
 }
